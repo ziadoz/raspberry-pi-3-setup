@@ -11,7 +11,8 @@ sudo nano /etc/boot.txt
 Add the following lines to the bottom of the file: 
 
 ```
-disable_overscan=1
+hdmi_group=1
+hdmi_mode=16
 hdmi_ignore_cec_init=1
 hdmi_ignore_cec=1
 gpu_mem=128
