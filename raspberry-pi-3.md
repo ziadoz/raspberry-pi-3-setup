@@ -8,7 +8,7 @@ Ensure the display works nicely over HDMI:
 sudo nano /etc/boot.txt
 ```
 
-Add the following lines as applicable: 
+Add the following lines to the bottom of the file: 
 
 ```
 disable_overscan=1
