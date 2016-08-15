@@ -52,6 +52,14 @@ Type=Application
 Categories=AudioVideo;Video;Player;TV;
 ```
 
+## Support FAT32 USB Devices
+
+Install the following packages: 
+
+```
+sudo apt-get install exfat-fuse exfat-utils
+```
+
 ## Links
 - http://raspberrypi.stackexchange.com/questions/6682/stopping-rasppi-raspbmc-from-auto-changing-source-on-tv
 - https://www.raspberrypi.org/forums/viewtopic.php?t=100811
