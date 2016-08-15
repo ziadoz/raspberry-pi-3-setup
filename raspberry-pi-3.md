@@ -29,3 +29,7 @@ Update repositories and install Kodi packages:
 sudo apt-get update
 sudo apt-get install kodi
 ```
+
+## Links
+- http://raspberrypi.stackexchange.com/questions/6682/stopping-rasppi-raspbmc-from-auto-changing-source-on-tv
+- https://www.raspberrypi.org/forums/viewtopic.php?t=100811
