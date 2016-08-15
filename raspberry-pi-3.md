@@ -61,5 +61,7 @@ sudo apt-get install exfat-fuse exfat-utils
 ```
 
 ## Links
+- https://www.raspberrypi.org/documentation/configuration/config-txt.md
 - http://raspberrypi.stackexchange.com/questions/6682/stopping-rasppi-raspbmc-from-auto-changing-source-on-tv
 - https://www.raspberrypi.org/forums/viewtopic.php?t=100811
+- https://mtantawy.com/quick-tip-how-to-update-to-latest-kodi-16-jarvis-on-raspberry-pi/
