@@ -70,6 +70,13 @@ Install the following packages:
 sudo apt-get install exfat-fuse exfat-utils
 ```
 
+## Install Firefox
+Install the following packages: 
+
+```
+sudo apt-get install iceweasel
+```
+
 ## Links
 - https://www.raspberrypi.org/documentation/configuration/config-txt.md
 - http://raspberrypi.stackexchange.com/questions/6682/stopping-rasppi-raspbmc-from-auto-changing-source-on-tv
