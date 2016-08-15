@@ -12,8 +12,8 @@ Add the following lines as applicable:
 
 ```
 disable_overscan=1
-gpu_mem=128
 hdmi_ignore_cec_init=1
+gpu_mem=128
 ``` 
 
 Now reboot the system: 
