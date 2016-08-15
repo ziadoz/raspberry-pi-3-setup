@@ -17,6 +17,16 @@ hdmi_ignore_cec=1
 gpu_mem=128
 ``` 
 
+In order to disable HDMI CEC you also need to drop a config file on the recovery partition: 
+
+```
+sudo su
+mount /dev/mmcblk0p1 /mnt
+echo hdmi_ignore_cec_init=1 >> /mnt/config.txt
+umount /mnt
+exit
+```
+
 Now reboot the system: 
 
 ```
