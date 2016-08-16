@@ -77,6 +77,10 @@ sudo dpkg -i firefox_*.deb
 ```
 
 ## Mount NAS
+Ensure the CFIS packages are installed: 
+```
+sudo apt-get install cifs-utils
+```
 
 Create a credentials file for the username and password: 
 ```
