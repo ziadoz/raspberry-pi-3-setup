@@ -100,7 +100,7 @@ username=username
 password=password
 ```
 
-Change the permissions on the credentials file:
+Change the permissions of the credentials file:
 ```
 chmod 600 ~/.smbcredentials
 ```
@@ -123,12 +123,12 @@ id -g username
 
 If that worked update the `/etc/fstab` to auto mount the NAS: 
 ```
-//192.168.0.x/NAS /media/NAS credentials=/home/username/.smbcredentials,iocharset=utf8,sec=ntlm,dir_mode=0500,file_mode=0500,uid=1000,gid=1000
+//192.168.0.x/NAS /media/NAS credentials=/home/username/.smbcredentials,iocharset=utf8,_netdev,x-systemd.automount,sec=ntlm,dir_mode=0500,file_mode=0500,uid=1000,gid=1000
 ```
 
 The above mounts the NAS as read-only. For full read and write add this instead: 
 ```
-//192.168.0.x/NAS /media/NAS credentials=/home/username/.smbcredentials,iocharset=utf8,sec=ntlm,rw,dir_mode=0777,file_mode=0777,uid=1000,gid=1000
+//192.168.0.x/NAS /media/NAS credentials=/home/username/.smbcredentials,iocharset=utf8,_netdev,x-systemd.automount,sec=ntlm,rw,dir_mode=0777,file_mode=0777,uid=1000,gid=1000
 ```
 
 _Note: Remember to update the commands above with your IP address, mount directory, username, UID and GID accordingly._
@@ -138,7 +138,7 @@ Now run this to mount the NAS:
 sudo mount -a
 ```
 
-Create a symlink to the NAS on the desktop: 
+Create a handy symlink to the NAS on the desktop: 
 ```
 sudo ln -s /media/NAS ~/Desktop/NAS
 ```
@@ -149,3 +149,4 @@ sudo ln -s /media/NAS ~/Desktop/NAS
 - https://www.raspberrypi.org/forums/viewtopic.php?t=100811
 - https://mtantawy.com/quick-tip-how-to-update-to-latest-kodi-16-jarvis-on-raspberry-pi/
 - https://www.raspberrypi.org/forums/viewtopic.php?f=63&t=150438
+- http://raspberrypi.stackexchange.com/questions/27179/automatic-mounting-of-nas-drive-fails
