@@ -124,7 +124,7 @@ The above mounts the NAS as read-only. For full read and write add this instead:
 //192.168.0.x/NAS /media/NAS credentials=/home/username/.smbcredentials,iocharset=utf8,sec=ntlm,rw,dir_mode=0777,file_mode=0777,uid=1000,gid=1000
 ```
 
-Remember to update the commands above with your IP address, mount directory, username, UID and GID accordingly.
+_Note: Remember to update the commands above with your IP address, mount directory, username, UID and GID accordingly._
 
 Now run this to mount the NAS:
 ```
