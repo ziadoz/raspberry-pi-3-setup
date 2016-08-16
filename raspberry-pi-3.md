@@ -131,6 +131,11 @@ Now run this to mount the NAS:
 sudo mount -a
 ```
 
+Create a symlink to the NAS on the desktop: 
+```
+sudo ln -s /media/NAS ~/Desktop/NAS
+```
+
 ## Links
 - https://www.raspberrypi.org/documentation/configuration/config-txt.md
 - http://raspberrypi.stackexchange.com/questions/6682/stopping-rasppi-raspbmc-from-auto-changing-source-on-tv
