@@ -1,5 +1,5 @@
 # Raspberry Pi 3 Setup
-The steps to get my Raspberry Pi 3 up and running.
+The steps I took get my Raspberry Pi 3 up and running.
 
 ## Change Password
 ```
@@ -131,7 +131,7 @@ The above mounts the NAS as read-only. For full read and write add this instead:
 //192.168.0.x/NAS /media/NAS credentials=/home/username/.smbcredentials,iocharset=utf8,_netdev,x-systemd.automount,sec=ntlm,rw,dir_mode=0777,file_mode=0777,uid=1000,gid=1000
 ```
 
-_Note: Remember to update the commands above with your IP address, mount directory, username, UID and GID accordingly._
+_Note: Remember to update the commands above with your own NAS IP address, mount directory, username, UID and GID accordingly._
 
 Now run this to mount the NAS:
 ```
