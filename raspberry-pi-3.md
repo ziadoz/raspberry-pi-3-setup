@@ -72,10 +72,11 @@ sudo apt-get install exfat-fuse exfat-utils
 ```
 
 ## Install Firefox
-Install the following packages: 
+[Download](https://launchpad.net/ubuntu/trusty/+package/firefox) the latest `armfh` Firefox `.deb` package from Ubuntu Launchpad. 
 
+Install it from the command line: 
 ```
-sudo apt-get install iceweasel
+sudo dpkg -i firefox_*.deb
 ```
 
 ## Links
@@ -83,3 +84,4 @@ sudo apt-get install iceweasel
 - http://raspberrypi.stackexchange.com/questions/6682/stopping-rasppi-raspbmc-from-auto-changing-source-on-tv
 - https://www.raspberrypi.org/forums/viewtopic.php?t=100811
 - https://mtantawy.com/quick-tip-how-to-update-to-latest-kodi-16-jarvis-on-raspberry-pi/
+- https://www.raspberrypi.org/forums/viewtopic.php?f=63&t=150438
