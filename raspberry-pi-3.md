@@ -8,13 +8,11 @@ passwd
 
 ## Setup Display
 Ensure the display works nicely over HDMI: 
-
 ````
 sudo nano /etc/boot.txt
 ```
 
 Add the following lines to the bottom of the file: 
-
 ```
 hdmi_group=1
 hdmi_mode=16
@@ -25,7 +23,6 @@ gpu_mem=128
 ``` 
 
 In order to disable HDMI CEC you also need to drop a config file on the recovery partition: 
-
 ```
 sudo su
 mount /dev/mmcblk0p1 /mnt
@@ -35,27 +32,23 @@ exit
 ```
 
 Now reboot the system: 
-
 ```
 sudo reboot
 ````
 
 ## Install Kodi
 Update repositories and install Kodi packages: 
-
 ```
 sudo apt-get update
 sudo apt-get install kodi
 ```
 
 Create a Kodi shortcut on the desktop that boots in standalone mode (avoids blackscreen on exit): 
-
 ```
 touch ~/Desktop/kodi-standalone.desktop
 ```
 
 Add the follow text to the file: 
-
 ```
 [Desktop Entry]
 Version=1.0
@@ -70,9 +63,7 @@ Categories=AudioVideo;Video;Player;TV;
 ```
 
 ## Support FAT32 USB Devices
-
 Install the following packages: 
-
 ```
 sudo apt-get install exfat-fuse exfat-utils
 ```
@@ -83,6 +74,57 @@ sudo apt-get install exfat-fuse exfat-utils
 Install it from the command line: 
 ```
 sudo dpkg -i firefox_*.deb
+```
+
+## Mount NAS
+
+Create a credentials file for the username and password: 
+```
+touch ~/.smbcredentials
+```
+
+Add the following contents, replacing the username and password:
+```
+username=username
+password=password
+```
+
+Change the permissions on the credentials file:
+```
+chmod 600 ~/.smbcredentials
+```
+
+Make a directory to mount the NAS to: 
+```
+sudo mkdir /media/NAS
+```
+
+Test you can mount the NAS manually: 
+```
+sudo mount -t cifs //192.168.0.x/NAS /media/NAS -o user=username
+```
+
+You can find out your users UID and GID with these commands:
+```
+id -u username
+id -g username
+```
+
+If that worked update the `/etc/fstab` to auto mount the NAS: 
+```
+//192.168.0.x/NAS /media/NAS credentials=/home/username/.smbcredentials,iocharset=utf8,sec=ntlm,dir_mode=0500,file_mode=0500,uid=1000,gid=1000
+```
+
+The above mounts the NAS as read-only. For full read and write add this instead: 
+```
+//192.168.0.x/NAS /media/NAS credentials=/home/username/.smbcredentials,iocharset=utf8,sec=ntlm,rw,dir_mode=0777,file_mode=0777,uid=1000,gid=1000
+```
+
+Remember to update the commands above with your IP address, mount directory, username, UID and GID accordingly.
+
+Now run this to mount the NAS:
+```
+sudo mount -a
 ```
 
 ## Links
