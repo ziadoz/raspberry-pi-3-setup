@@ -15,6 +15,7 @@ hdmi_group=1
 hdmi_mode=16
 hdmi_ignore_cec_init=1
 hdmi_ignore_cec=1
+hdmi_drive=2
 gpu_mem=128
 ``` 
 
