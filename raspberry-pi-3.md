@@ -1,6 +1,11 @@
 # Raspberry Pi 3 Setup
 The steps to get my Raspberry Pi 3 up and running.
 
+## Change Password
+```
+passwd
+```
+
 ## Setup Display
 Ensure the display works nicely over HDMI: 
 
