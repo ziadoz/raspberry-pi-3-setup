@@ -178,6 +178,11 @@ Now run this to mount the USB drive:
 sudo mount -a
 ```
 
+Create a handy symlink to the USB drive on the desktop: 
+```
+sudo ln -s /media/USB-Drive ~/Desktop/USB-Drive
+```
+
 ## Links
 - https://www.raspberrypi.org/documentation/configuration/config-txt.md
 - http://raspberrypi.stackexchange.com/questions/6682/stopping-rasppi-raspbmc-from-auto-changing-source-on-tv
