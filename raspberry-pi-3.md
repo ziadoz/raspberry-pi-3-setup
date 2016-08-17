@@ -131,7 +131,7 @@ Or for full **read and write** add this to the `/etc/fstab` instead:
 //192.168.0.x/NAS /media/NAS credentials=/home/username/.smbcredentials,iocharset=utf8,_netdev,x-systemd.automount,sec=ntlm,rw,dir_mode=0777,file_mode=0777,uid=1000,gid=1000 0 0
 ```
 
-_Note: Remember to update the commands above with your own NAS IP address, mount directory, username, UID and GID accordingly._
+_Note: Update the lines above with your own NAS IP address, mount directory, username, UID and GID accordingly._
 
 Now run this to mount the NAS:
 ```
@@ -171,7 +171,7 @@ Now add the following to the `/etc/fstab` to auto mount the USB drive:
 UUID=1234-5678 /media/USB-Drive exfat defaults,auto,umask=000,users,rw 0 0
 ```
 
-_Note: Remember to update the commands above with your own UUID, mount directory and username accordingly._
+_Note: Update the line above with your own UUID, mount directory and file system accordingly._
 
 Now run this to mount the USB drive:
 ```
