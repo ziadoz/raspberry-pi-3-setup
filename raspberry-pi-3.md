@@ -69,10 +69,10 @@ Type=Application
 Categories=AudioVideo;Video;Player;TV;
 ```
 
-## Support FAT32 USB Devices
+## Install FAT32 and NTFS File System Support
 Install the following packages: 
 ```
-sudo apt-get install exfat-fuse exfat-utils
+sudo apt-get install exfat-fuse exfat-utils ntfs-3g
 ```
 
 ## Install Firefox
