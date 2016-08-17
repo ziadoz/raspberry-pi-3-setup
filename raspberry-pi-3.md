@@ -24,7 +24,7 @@ ClientAliveCountMax 5
 Then restart the SSH service:
 ```
 sudo service ssh restart
-``
+```
 
 ## Setup Display
 Ensure the display works nicely over HDMI: 
