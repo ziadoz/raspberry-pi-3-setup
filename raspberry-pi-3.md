@@ -2,6 +2,7 @@
 The steps I took get my Raspberry Pi 3 up and running.
 
 ## Change Password
+Run the following command, then enter the current password and a new password twice to confirm: 
 ```
 passwd
 ```
