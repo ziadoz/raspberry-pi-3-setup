@@ -123,12 +123,12 @@ id -g username
 
 Now update the `/etc/fstab` file to auto mount the NAS as **read-only**: 
 ```
-//192.168.0.x/NAS /media/NAS credentials=/home/username/.smbcredentials,iocharset=utf8,_netdev,x-systemd.automount,sec=ntlm,dir_mode=0500,file_mode=0500,uid=1000,gid=1000
+//192.168.0.x/NAS /media/NAS credentials=/home/username/.smbcredentials,iocharset=utf8,_netdev,x-systemd.automount,sec=ntlm,dir_mode=0500,file_mode=0500,uid=1000,gid=1000 0 0
 ```
 
 Or for full **read and write** add this to the `/etc/fstab` instead: 
 ```
-//192.168.0.x/NAS /media/NAS credentials=/home/username/.smbcredentials,iocharset=utf8,_netdev,x-systemd.automount,sec=ntlm,rw,dir_mode=0777,file_mode=0777,uid=1000,gid=1000
+//192.168.0.x/NAS /media/NAS credentials=/home/username/.smbcredentials,iocharset=utf8,_netdev,x-systemd.automount,sec=ntlm,rw,dir_mode=0777,file_mode=0777,uid=1000,gid=1000 0 0
 ```
 
 _Note: Remember to update the commands above with your own NAS IP address, mount directory, username, UID and GID accordingly._
