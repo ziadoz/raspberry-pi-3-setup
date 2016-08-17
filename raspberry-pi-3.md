@@ -6,13 +6,21 @@ The steps I took get my Raspberry Pi 3 up and running.
 passwd
 ```
 
-## Enable SSH
+## Setup SSH
 Launch the Raspbery Config: 
 ```
 sudo raspi-config
 ```
 
 Go to `9 Advanced Options` then `A4 SSH` and choose `<Enable>`.
+
+Open the `/etc/ssh/sshd_config` file and add the following: 
+```
+PermitRootLogin no
+ClientAliveInterval 30
+ClientAliveCountMax 5
+```
+
 ## Setup Display
 Ensure the display works nicely over HDMI: 
 ````
