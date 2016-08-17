@@ -12,7 +12,7 @@ Launch the Raspbery Config:
 sudo raspi-config
 ```
 
-Got to `9 Advanced Options` then `A4 SSH` and choose `<Enable>`.
+Go to `9 Advanced Options` then `A4 SSH` and choose `<Enable>`.
 ## Setup Display
 Ensure the display works nicely over HDMI: 
 ````
