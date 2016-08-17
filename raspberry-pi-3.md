@@ -143,6 +143,41 @@ Create a handy symlink to the NAS on the desktop:
 sudo ln -s /media/NAS ~/Desktop/NAS
 ```
 
+## Mount USB Drive
+Find the UUID of the USB drive: 
+```
+sudo blkid
+# or
+ls -l /dev/disk/by-uuid/
+```
+
+The output should look something like the following. Note the _UUID_ value:  
+```
+/dev/sda1: LABEL="USB DRIVE" UUID="1234-5678" TYPE="exfat" PARTUUID="ffffffff-01"
+```
+
+Make a directory to mount the USB drive to:
+```
+sudo mkdir /media/USB-Drive
+```
+
+Test mounting the drive manually to make sure it works: 
+```
+sudo mount -t exfat -o uid=pi,gid=pi UUID=1234-5678 /media/USB-Drive
+```
+
+Now add the following to the `/etc/fstab` to auto mount the USB drive: 
+```
+UUID=1234-5678 /media/USB-Drive exfat defaults,auto,umask=000,users,rw 0 0
+```
+
+_Note: Remember to update the commands above with your own UUID, mount directory and username accordingly._
+
+Now run this to mount the USB drive:
+```
+sudo mount -a
+```
+
 ## Links
 - https://www.raspberrypi.org/documentation/configuration/config-txt.md
 - http://raspberrypi.stackexchange.com/questions/6682/stopping-rasppi-raspbmc-from-auto-changing-source-on-tv
@@ -150,3 +185,5 @@ sudo ln -s /media/NAS ~/Desktop/NAS
 - https://mtantawy.com/quick-tip-how-to-update-to-latest-kodi-16-jarvis-on-raspberry-pi/
 - https://www.raspberrypi.org/forums/viewtopic.php?f=63&t=150438
 - http://raspberrypi.stackexchange.com/questions/27179/automatic-mounting-of-nas-drive-fails
+- http://www.htpcguides.com/properly-mount-usb-storage-raspberry-pi/
+- http://www.miqu.me/blog/2015/01/14/tip-exfat-hdd-with-raspberry-pi/
