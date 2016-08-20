@@ -281,6 +281,7 @@ Type=Application
 - https://www.raspberrypi.org/forums/viewtopic.php?t=100811
 - https://mtantawy.com/quick-tip-how-to-update-to-latest-kodi-16-jarvis-on-raspberry-pi/
 - https://www.raspberrypi.org/forums/viewtopic.php?f=63&t=150438
+- https://launchpad.net/ubuntu/trusty/+package/firefox
 - http://raspberrypi.stackexchange.com/questions/27179/automatic-mounting-of-nas-drive-fails
 - http://www.htpcguides.com/properly-mount-usb-storage-raspberry-pi/
 - http://www.miqu.me/blog/2015/01/14/tip-exfat-hdd-with-raspberry-pi/
