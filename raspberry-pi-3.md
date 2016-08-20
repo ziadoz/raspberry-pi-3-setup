@@ -303,6 +303,9 @@ Terminal=false
 Type=Application
 ```
 
+## Notes
+You see the icons available for desktop shortcuts in `/usr/share/pixmaps/`
+
 ## Links
 - https://www.raspberrypi.org/documentation/configuration/config-txt.md
 - http://raspberrypi.stackexchange.com/questions/6682/stopping-rasppi-raspbmc-from-auto-changing-source-on-tv
