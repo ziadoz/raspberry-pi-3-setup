@@ -186,7 +186,7 @@ Now add the following to the `/etc/fstab` to auto mount the USB drive:
 UUID=1234-5678 /media/USB-Drive exfat defaults,auto,umask=000,users,rw,uid=username,gid=group 0 0
 ```
 
-_Note: Update the line above with your own UUID, mount directory and file system accordingly._
+_Note: Update the line above with your own UUID, mount directory, file system, UID and GID accordingly._
 
 Now run this to mount the USB drive:
 ```
