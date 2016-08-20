@@ -92,6 +92,9 @@ sudo apt-get install exfat-fuse exfat-utils ntfs-3g
 
 ## Install Firefox
 [Download](https://launchpad.net/ubuntu/trusty/+package/firefox) the latest `armfh` Firefox `.deb` package from Ubuntu Launchpad. 
+```
+wget http://launchpadlibrarian.net/275571567/firefox_48.0+build2-0ubuntu0.14.04.1_armhf.deb
+```
 
 Install it from the command line: 
 ```
