@@ -67,6 +67,7 @@ sudo apt-get install kodi
 Create a Kodi shortcut on the desktop that boots in standalone mode (avoids blackscreen on exit): 
 ```
 touch ~/Desktop/kodi-standalone.desktop
+nano ~/Desktop/kodi-standalone.desktop
 ```
 
 Add the follow text to the file: 
@@ -106,6 +107,7 @@ sudo apt-get install cifs-utils
 Create a credentials file for the username and password: 
 ```
 touch ~/.smbcredentials
+nano ~/.smbcredentials
 ```
 
 Add the following contents, replacing the username and password:
@@ -215,7 +217,13 @@ sudo pip install libusb1
 sudo python3.4 setup.py install
 ```
 
-Now create the file `sudo touch /lib/udev/rules.d/99-steam-controller-perms.rules` and add the following: 
+Now create the file rules file:
+```
+sudo touch /lib/udev/rules.d/99-steam-controller-perms.rules
+sudo nano /lib/udev/rules.d/99-steam-controller-perms.rules
+```
+
+Then add the following to it: 
 ```
 # This rule is needed for basic functionality of the controller in
 # Steam and keyboard/mouse emulation
