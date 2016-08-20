@@ -163,7 +163,6 @@ sudo ln -s /media/NAS ~/Desktop/NAS
 Find the UUID of the USB drive: 
 ```
 sudo blkid
-# or
 ls -l /dev/disk/by-uuid/
 ```
 
