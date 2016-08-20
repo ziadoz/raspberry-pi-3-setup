@@ -124,6 +124,27 @@ sudo apt update
 sudo apt install chromium-browser
 ```
 
+Create a desktop shortcut file: 
+```
+touch ~/Desktop/chrome.desktop
+nano ~/Desktop/chrome.desktop
+```
+
+And add the following contents to it: 
+```
+[Desktop Entry]
+Version=1.0
+Name=Chrome
+Exec=chromium-browser
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=chromium
+Categories=GNOME;GTK;Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;
+StartupNotify=true
+```
+
 ## Mount NAS
 Ensure the CFIS packages are installed: 
 ```
