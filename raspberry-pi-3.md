@@ -343,6 +343,7 @@ Name=Keyboard
 Exec=matchbox-keyboard
 Terminal=false
 Type=Application
+Icon=matchbox-keyboard
 ```
 
 ## Notes
