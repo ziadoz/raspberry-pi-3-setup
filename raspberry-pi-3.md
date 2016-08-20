@@ -236,6 +236,13 @@ Start the driver and your controller should work:
 sc-desktop.py start
 ```
 
+To start the driver automatically at the desktop create the file `~/.config/autostart/Steam-Controller.desktop` with the follow contents: 
+
+```
+[Desktop Entry]
+Exec=sc-desktop.py start
+```
+
 ## Links
 - https://www.raspberrypi.org/documentation/configuration/config-txt.md
 - http://raspberrypi.stackexchange.com/questions/6682/stopping-rasppi-raspbmc-from-auto-changing-source-on-tv
