@@ -101,6 +101,29 @@ Install it from the command line:
 sudo dpkg -i firefox_*.deb
 ```
 
+## Install Google Chrome
+Open the apt sources file: 
+```
+sudo nano /etc/apt/sources.list
+```
+
+Add the following lines to the bottom of the file: 
+```
+deb http://ppa.launchpad.net/canonical-chromium-builds/stage/ubuntu vivid main 
+#deb-src http://ppa.launchpad.net/canonical-chromium-builds/stage/ubuntu vivid main 
+```
+
+Now add the repository GPG key: 
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys DB69B232436DAC4B50BDC59E4E1B983C5B393194
+```
+
+And install the packages: 
+```
+sudo apt update
+sudo apt install chromium-browser
+```
+
 ## Mount NAS
 Ensure the CFIS packages are installed: 
 ```
