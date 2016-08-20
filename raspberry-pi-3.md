@@ -203,6 +203,30 @@ sudo ln -s /media/USB-Drive ~/Desktop/USB-Drive
 sudo apt-get install tree
 ```
 
+## Steam Controller
+Download and install the Steam Controller Python drivers: 
+```
+
+cd ~/
+git clone https://github.com/ynsta/steamcontroller.git
+cd steamcontroller
+sudo pip install libusb1
+sudo python3.4 setup.py install
+```
+
+Now create the file `/lib/udev/rules.d/99-steam-controller-perms.rules` and add the following: 
+```
+# This rule is needed for basic functionality of the controller in
+# Steam and keyboard/mouse emulation
+SUBSYSTEM=="usb", ATTRS{idVendor}=="28de", MODE="0666"
+
+# This rule is necessary for gamepad emulation; make sure you
+# replace 'pgriffais' with the username of the user that runs Steam
+KERNEL=="uinput", MODE="0660", GROUP="group", OPTIONS+="static_node=uinput"
+```
+
+_Note: Replace `group` with the group of user (e.g. `pi`)._
+
 ## Links
 - https://www.raspberrypi.org/documentation/configuration/config-txt.md
 - http://raspberrypi.stackexchange.com/questions/6682/stopping-rasppi-raspbmc-from-auto-changing-source-on-tv
@@ -212,3 +236,4 @@ sudo apt-get install tree
 - http://raspberrypi.stackexchange.com/questions/27179/automatic-mounting-of-nas-drive-fails
 - http://www.htpcguides.com/properly-mount-usb-storage-raspberry-pi/
 - http://www.miqu.me/blog/2015/01/14/tip-exfat-hdd-with-raspberry-pi/
+- https://github.com/ynsta/steamcontroller
