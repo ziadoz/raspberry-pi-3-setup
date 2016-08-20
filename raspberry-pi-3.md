@@ -206,7 +206,6 @@ sudo apt-get install tree
 ## Steam Controller
 Download and install the Steam Controller Python drivers: 
 ```
-
 cd ~/
 git clone https://github.com/ynsta/steamcontroller.git
 cd steamcontroller
