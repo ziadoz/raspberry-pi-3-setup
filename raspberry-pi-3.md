@@ -304,7 +304,7 @@ Type=Application
 ```
 
 ## Notes
-You see the icons available for desktop shortcuts in `/usr/share/pixmaps/`
+You can see the icons available for desktop shortcuts in `/usr/share/pixmaps/`
 
 ## Links
 - https://www.raspberrypi.org/documentation/configuration/config-txt.md
