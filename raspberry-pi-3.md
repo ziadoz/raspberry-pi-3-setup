@@ -203,7 +203,9 @@ sudo ln -s /media/USB-Drive ~/Desktop/USB-Drive
 sudo apt-get install tree
 ```
 
-## Steam Controller
+## Setup Steam Controller
+The following instructions should allow you to use the Steam Controller wirelessly.
+
 Download and install the Steam Controller Python drivers: 
 ```
 cd ~/
