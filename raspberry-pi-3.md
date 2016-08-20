@@ -227,6 +227,16 @@ KERNEL=="uinput", MODE="0660", GROUP="group", OPTIONS+="static_node=uinput"
 
 _Note: Replace `group` with the group of user (e.g. `pi`)._
 
+Now reload udev:
+```
+sudo udevadm control --reload
+```
+
+Start the driver and your controller should work: 
+```
+sc-desktop.py start
+```
+
 ## Links
 - https://www.raspberrypi.org/documentation/configuration/config-txt.md
 - http://raspberrypi.stackexchange.com/questions/6682/stopping-rasppi-raspbmc-from-auto-changing-source-on-tv
