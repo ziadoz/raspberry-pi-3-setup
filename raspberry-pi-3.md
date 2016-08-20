@@ -288,3 +288,5 @@ Type=Application
 - https://github.com/ynsta/steamcontroller
 - http://askubuntu.com/questions/686214/how-do-i-get-a-steam-controller-working
 - https://www.raspberrypi.org/forums/viewtopic.php?t=18968
+- http://www.techrepublic.com/article/five-tips-for-getting-the-most-out-of-a-raspberry-pi-3-as-a-pc/
+- http://raspberrypi.stackexchange.com/questions/44384/how-to-get-chromium-on-raspberry-3/44690
