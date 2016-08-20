@@ -215,7 +215,7 @@ sudo pip install libusb1
 sudo python3.4 setup.py install
 ```
 
-Now create the file `/lib/udev/rules.d/99-steam-controller-perms.rules` and add the following: 
+Now create the file `sudo touch /lib/udev/rules.d/99-steam-controller-perms.rules` and add the following: 
 ```
 # This rule is needed for basic functionality of the controller in
 # Steam and keyboard/mouse emulation
@@ -238,11 +238,30 @@ Start the driver and your controller should work:
 sc-desktop.py start
 ```
 
-To start the driver automatically at the desktop create the file `~/.config/autostart/Steam-Controller.desktop` with the follow contents: 
+To start the driver automatically at the desktop create the file `touch ~/.config/autostart/Steam-Controller.desktop` with the follow contents: 
 
 ```
 [Desktop Entry]
 Exec=sc-desktop.py start
+```
+
+You can also install an on-screen keyboard: 
+```
+sudo apt-get install matchbox-keyboard
+```
+
+And then create a handy shortcut to it on the desktop:
+```
+touch ~/Desktop/keyboard.desktop
+```
+
+Then add the following contents to the file: 
+```
+[Desktop Entry]
+Name=Keyboard
+Exec=matchbox-keyboard
+Terminal=false
+Type=Application
 ```
 
 ## Links
@@ -255,3 +274,5 @@ Exec=sc-desktop.py start
 - http://www.htpcguides.com/properly-mount-usb-storage-raspberry-pi/
 - http://www.miqu.me/blog/2015/01/14/tip-exfat-hdd-with-raspberry-pi/
 - https://github.com/ynsta/steamcontroller
+- http://askubuntu.com/questions/686214/how-do-i-get-a-steam-controller-working
+- https://www.raspberrypi.org/forums/viewtopic.php?t=18968
