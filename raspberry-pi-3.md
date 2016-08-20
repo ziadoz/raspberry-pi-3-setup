@@ -249,8 +249,13 @@ Start the driver and your controller should work:
 sc-desktop.py start
 ```
 
-To start the driver automatically at the desktop create the file `touch ~/.config/autostart/Steam-Controller.desktop` with the follow contents: 
+To start the driver automatically at the desktop create the file:
+```
+touch ~/.config/autostart/Steam-Controller.desktop
+nano ~/.config/autostart/Steam-Controller.desktop
+```
 
+Add the following contents to the file: 
 ```
 [Desktop Entry]
 Exec=sc-desktop.py start
@@ -261,7 +266,7 @@ You can also install an on-screen keyboard:
 sudo apt-get install matchbox-keyboard
 ```
 
-And then create a handy shortcut to it on the desktop:
+And then create a shortcut to it on the desktop:
 ```
 touch ~/Desktop/keyboard.desktop
 ```
