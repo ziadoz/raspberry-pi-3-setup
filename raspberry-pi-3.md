@@ -70,7 +70,7 @@ touch ~/Desktop/kodi-standalone.desktop
 nano ~/Desktop/kodi-standalone.desktop
 ```
 
-Add the follow contents to the file: 
+Add the following contents to the file: 
 ```
 [Desktop Entry]
 Version=1.0
