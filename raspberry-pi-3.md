@@ -70,7 +70,7 @@ touch ~/Desktop/kodi-standalone.desktop
 nano ~/Desktop/kodi-standalone.desktop
 ```
 
-Add the follow text to the file: 
+Add the follow contents to the file: 
 ```
 [Desktop Entry]
 Version=1.0
@@ -88,82 +88,6 @@ Categories=AudioVideo;Video;Player;TV;
 Install the following packages: 
 ```
 sudo apt-get install exfat-fuse exfat-utils ntfs-3g
-```
-
-## Install Firefox
-[Download](https://launchpad.net/ubuntu/trusty/+package/firefox) the latest `armfh` Firefox `.deb` package from Ubuntu Launchpad. 
-```
-wget http://launchpadlibrarian.net/275571567/firefox_48.0+build2-0ubuntu0.14.04.1_armhf.deb
-```
-
-Install it from the command line: 
-```
-sudo dpkg -i firefox_*.deb
-```
-
-Create a desktop shortcut file: 
-```
-touch ~/Desktop/firefox.desktop
-nano ~/Desktop/firefox.desktop
-```
-
-And add the following contents to it: 
-```
-[Desktop Entry]
-Version=1.0
-Name=Firefox
-Exec=firefox %u
-Terminal=false
-X-MultipleArgs=false
-Type=Application
-Icon=firefox
-Categories=GNOME;GTK;Network;WebBrowser;
-MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;
-StartupNotify=true
-```
-
-## Install Google Chrome
-Open the apt sources file: 
-```
-sudo nano /etc/apt/sources.list
-```
-
-Add the following lines to the bottom of the file: 
-```
-deb http://ppa.launchpad.net/canonical-chromium-builds/stage/ubuntu vivid main 
-#deb-src http://ppa.launchpad.net/canonical-chromium-builds/stage/ubuntu vivid main 
-```
-
-Now add the repository GPG key: 
-```
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys DB69B232436DAC4B50BDC59E4E1B983C5B393194
-```
-
-And install the packages: 
-```
-sudo apt update
-sudo apt install chromium-browser
-```
-
-Create a desktop shortcut file: 
-```
-touch ~/Desktop/chrome.desktop
-nano ~/Desktop/chrome.desktop
-```
-
-And add the following contents to it: 
-```
-[Desktop Entry]
-Version=1.0
-Name=Chrome
-Exec=chromium-browser
-Terminal=false
-X-MultipleArgs=false
-Type=Application
-Icon=chromium
-Categories=GNOME;GTK;Network;WebBrowser;
-MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;x-scheme-handler/chrome;video/webm;application/x-xpinstall;
-StartupNotify=true
 ```
 
 ## Mount NAS
