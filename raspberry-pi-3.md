@@ -37,6 +37,14 @@ Then restart the SSH service:
 sudo service ssh restart
 ```
 
+## Disable Automatic Login
+Run the configuration command:
+```
+sudo raspi-config
+```
+
+Go to `3 Boot Options` then `B3 Desktop` and choose `<Ok>`.
+
 ## Setup Display
 Ensure the display works nicely over HDMI: 
 ````
