@@ -1,6 +1,16 @@
 # Raspberry Pi 3 Setup
 The steps I took get my Raspberry Pi 3 up and running.
 
+## Upgrade Jessie
+Run the following commands to update Jessie to Pixel, which includes Chromium with hardware video support: 
+```
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get install -y rpi-chromium-mods
+sudo apt-get install -y python-sense-emu python3-sense-emu
+sudo apt-get install -y python-sense-emu-doc realvnc-vnc-viewer
+```
+
 ## Change Password
 Run the following command, then enter the current password and a new password twice to confirm: 
 ```
@@ -288,3 +298,4 @@ You can see the icons available for desktop shortcuts in `/usr/share/pixmaps/`
 - https://www.raspberrypi.org/forums/viewtopic.php?t=18968
 - http://www.techrepublic.com/article/five-tips-for-getting-the-most-out-of-a-raspberry-pi-3-as-a-pc/
 - http://raspberrypi.stackexchange.com/questions/44384/how-to-get-chromium-on-raspberry-3/44690
+- https://www.raspberrypi.org/blog/introducing-pixel/
