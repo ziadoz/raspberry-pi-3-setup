@@ -37,7 +37,7 @@ Then restart the SSH service:
 sudo service ssh restart
 ```
 
-## Disable Automatic Login
+## Disable Automatic Desktop Login
 Run the configuration command:
 ```
 sudo raspi-config
