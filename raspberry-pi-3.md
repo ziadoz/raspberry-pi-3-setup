@@ -2,7 +2,7 @@
 The steps I took get my Raspberry Pi 3 up and running.
 
 ## Upgrade Jessie
-Run the following commands to update Jessie to Pixel, which includes Chromium with hardware video support: 
+Run the following commands to [upgrade Jessie to Pixel](https://www.raspberrypi.org/blog/introducing-pixel/), which includes Chromium with hardware video support: 
 ```
 sudo apt-get update
 sudo apt-get dist-upgrade
