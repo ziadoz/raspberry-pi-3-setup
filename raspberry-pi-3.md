@@ -289,22 +289,7 @@ Exec=sc-desktop.py start
 
 You can also install an on-screen keyboard: 
 ```
-sudo apt-get install matchbox-keyboard
-```
-
-And then create a shortcut to it on the desktop:
-```
-touch ~/Desktop/keyboard.desktop
-```
-
-Then add the following contents to the file: 
-```
-[Desktop Entry]
-Name=Keyboard
-Exec=matchbox-keyboard
-Terminal=false
-Type=Application
-Icon=matchbox-keyboard
+sudo apt-get install florence
 ```
 
 ## Install Useful Packages
