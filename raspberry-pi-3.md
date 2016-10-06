@@ -292,6 +292,21 @@ You can also install an on-screen keyboard:
 sudo apt-get install florence
 ```
 
+And then create a shortcut to it on the desktop:
+```
+touch ~/Desktop/keyboard.desktop
+```
+
+Then add the following contents to the file: 
+```
+[Desktop Entry]
+Name=Keyboard
+Exec=florence
+Terminal=false
+Type=Application
+Icon=florence
+```
+
 ## Install Useful Packages
 ```
 sudo apt-get install tree screen tmux
