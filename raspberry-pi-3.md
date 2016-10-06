@@ -141,6 +141,11 @@ Test you can mount the NAS manually:
 sudo mount -t cifs //192.168.0.x/NAS /media/NAS -o user=username
 ```
 
+Any mounting problems can be found by checking the logs:
+```
+tail -f  /var/log/kern.log
+```
+
 You can find out your users UID and GID with these commands:
 ```
 id -u username
