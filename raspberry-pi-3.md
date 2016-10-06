@@ -211,13 +211,18 @@ sudo ln -s /media/USB-Drive ~/Desktop/USB-Drive
 ```
 
 ## Backup NAS to USB Drive
-Create a new cron file: 
+Do a dry run to ensure the correct files are being backed up: 
+```
+rsync -rtvucn --exclude='.DS_Store' --exclude='.AppleDouble/' --exclude='._' /media/NAS/ /media/USB-Drive/
+```
+
+Once you're happy it works, create a new cron file: 
 ```
 sudo touch /etc/cron.d/nas_backup
 sudo nano /etc/cron.d/nas_backup
 ```
 
-Add the following contents to it: 
+Add the following contents to it to run it every night at 1am: 
 ```
 SHELL=/bin/bash
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games
