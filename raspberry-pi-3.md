@@ -234,11 +234,6 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/gam
 0 1 * * * rsync -rtvuc --exclude='.DS_Store' --exclude='.AppleDouble/' --exclude='._' /media/NAS/ /media/USB-Drive/
 ```
 
-## Install Useful Packages
-```
-sudo apt-get install tree
-```
-
 ## Setup Steam Controller
 The following instructions should allow you to use the Steam Controller wirelessly.
 
@@ -310,6 +305,11 @@ Exec=matchbox-keyboard
 Terminal=false
 Type=Application
 Icon=matchbox-keyboard
+```
+
+## Install Useful Packages
+```
+sudo apt-get install tree screen tmux
 ```
 
 ## Notes
