@@ -216,9 +216,14 @@ sudo ln -s /media/USB-Drive ~/Desktop/USB-Drive
 ```
 
 ## Backup NAS to USB Drive
-Do a dry run to ensure the correct files are being backed up: 
+Do a dry run (the `-n` flag) to ensure the correct files are being backed up: 
 ```
-rsync -rtvucn --exclude=".DS_Store" --exclude=".AppleDouble/" --exclude="._" /media/NAS/ /media/USB-Drive/
+rsync -rthvucn --progress --exclude='Videos/*' /media/NAS/ /media/USB-Drive/
+```
+
+Next create a directory to store the logs in: 
+```
+mkdir ~/Logs
 ```
 
 Once you're happy it works you can add it to your user's crontab: 
@@ -228,7 +233,12 @@ crontab -e
 
 Add the following contents to it to run it every night at 1am: 
 ```
-0 1 * * * rsync -rtvuc --exclude=".DS_Store" --exclude=".AppleDouble/" --exclude="._" /media/NAS/ /media/USB-Drive/
+0 1 * * * rsync -rthvuc --progress --exclude='Videos/*' /media/NAS/ /media/USB-Drive/ 2>&1 | tee $HOME/Logs/nas_backups.txt
+```
+
+You can see the last backup log by viewing the file contents:
+```
+cat ~/Logs/nas_backups.txt
 ```
 
 ## Setup Steam Controller
