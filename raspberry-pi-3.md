@@ -218,7 +218,7 @@ sudo ln -s /media/USB-Drive ~/Desktop/USB-Drive
 ## Backup NAS to USB Drive
 Do a dry run (the `-n` flag) to ensure the correct files are being backed up: 
 ```
-rsync -rthvucn --progress /media/NAS/ /media/USB-Drive/
+rsync -rthvucn /media/NAS/ /media/USB-Drive/
 ```
 
 Next create a directory to store the logs in: 
@@ -233,7 +233,7 @@ crontab -e
 
 Add the following contents to it to run it every night at 1am: 
 ```
-0 1 * * * rsync -rthvuc --progress /media/NAS/ /media/USB-Drive/ 2>&1 | tee $HOME/Logs/nas_backups.txt
+0 1 * * * rsync -rthvuc /media/NAS/ /media/USB-Drive/ 2>&1 | tee $HOME/Logs/nas_backups.txt
 ```
 
 You can add the `--exclude` option to exclude a specific pattern of files or directories.
