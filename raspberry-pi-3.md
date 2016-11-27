@@ -233,7 +233,7 @@ crontab -e
 
 Add the following contents to it to run it every night at 1am: 
 ```
-0 1 * * * rsync -rthvuc /media/NAS/ /media/USB-Drive/ 2>&1 | tee $HOME/Logs/nas_backups.txt
+0 1 * * * rsync -rthvuc /media/NAS/ /media/USB-Drive/ 2>&1 | tee "$HOME/Logs/nas_backups_`date +'%Y-%m-%d'`.txt"
 ```
 
 You can add the `--exclude` option to exclude a specific pattern of files or directories.
