@@ -344,3 +344,4 @@ You can see the icons available for desktop shortcuts in `/usr/share/pixmaps/`
 - https://kuttler.eu/en/post/sshfs-transport-endpoint-not-connecte/
 - http://www.omaroid.com/fstab-permission-masks-explained/
 - http://askubuntu.com/questions/429848/dmask-and-fmask-mount-options
+- http://askubuntu.com/questions/609003/mount-exfat-warning
