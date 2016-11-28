@@ -223,7 +223,7 @@ mkdir ~/Backups
 
 Then create an rsync ignore file, this will exclude unneccesary Windows and macOS files from being backed up:
 ```
-touch ~/Backups/rsync_excludes.txy
+touch ~/Backups/rsync_excludes.txt
 ```
 
 And add the following contents:
