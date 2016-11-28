@@ -340,3 +340,5 @@ You can see the icons available for desktop shortcuts in `/usr/share/pixmaps/`
 - http://www.techrepublic.com/article/five-tips-for-getting-the-most-out-of-a-raspberry-pi-3-as-a-pc/
 - http://raspberrypi.stackexchange.com/questions/44384/how-to-get-chromium-on-raspberry-3/44690
 - https://www.raspberrypi.org/blog/introducing-pixel/
+- http://alanwsmith.com/rsync-exclude-list-for-mac-osx
+- https://kuttler.eu/en/post/sshfs-transport-endpoint-not-connecte/
