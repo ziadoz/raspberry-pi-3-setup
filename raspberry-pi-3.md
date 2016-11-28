@@ -216,14 +216,53 @@ sudo ln -s /media/USB-Drive ~/Desktop/USB-Drive
 ```
 
 ## Backup NAS to USB Drive
-Do a dry run (the `-n` flag) to ensure the correct files are being backed up: 
+First, create a directory to store the backup logs in: 
 ```
-rsync -rthvucn /media/NAS/ /media/USB-Drive/
+mkdir ~/Backups
 ```
 
-Next create a directory to store the logs in: 
+Then create an rsync ignore file, this will exclude unneccesary Windows and macOS files from being backed up:
 ```
-mkdir ~/Logs
+touch ~/Backups/rsync_excludes.txy
+```
+
+And add the following contents:
+```
+$RECYCLE.BIN
+$Recycle.Bin
+._*
+.AppleDB
+.AppleDesktop
+.AppleDouble
+.com.apple.timemachine.supported
+.dbfseventsd
+.DocumentRevisions-V100*
+.DS_Store
+.fseventsd
+.PKInstallSandboxManager
+.Spotlight*
+.SymAV*
+.symSchedScanLockxz
+.TemporaryItems
+.Trash*
+.vol
+.VolumeIcon.icns
+Desktop DB
+Desktop DF
+hiberfil.sys
+lost+found
+Network Trash Folder
+pagefile.sys
+Recycled
+RECYCLER
+System Volume Information
+Temporary Items
+Thumbs.d
+```
+
+Do a dry run (the `-n` flag) to ensure the correct files are being backed up: 
+```
+rsync -rthvuc --log-file="$HOME/Backups/nas_backups.txt" --exclude-from="$HOME/Backups/rsync_excludes.txt" /media/NAS/ /media/USB-Drive/
 ```
 
 Once you're happy it works you can add it to your user's crontab: 
@@ -233,14 +272,14 @@ crontab -e
 
 Add the following contents to it to run it every night at 1am: 
 ```
-0 1 * * * rsync -rthvuc /media/NAS/ /media/USB-Drive/ 2>&1 | tee "$HOME/Logs/nas_backups_`date +'%Y-%m-%d'`.txt"
+0 1 * * * rsync -rthvuc --log-file="$HOME/Backups/nas_backups_`date +'%Y-%m-%d'`.txt" --exclude-from="$HOME/Backups/rsync_excludes.txt" /media/NAS/ /media/USB-Drive/
 ```
 
 You can add the `--exclude` option to exclude a specific pattern of files or directories.
 
 You can see the last backup log by viewing the file contents:
 ```
-cat ~/Logs/nas_backups.txt
+cat ~/Logs/nas_backups_YYYY-MM-DD.txt
 ```
 
 ## Setup Steam Controller
