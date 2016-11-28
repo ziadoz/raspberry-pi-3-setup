@@ -200,7 +200,7 @@ sudo mount -t exfat -o uid=pi,gid=pi UUID=1234-5678 /media/USB-Drive
 
 Now add the following to the `/etc/fstab` to auto mount the USB drive: 
 ```
-UUID=1234-5678 /media/USB-Drive exfat defaults,auto,umask=000,users,rw,uid=username,gid=group 0 0
+UUID=1234-5678 /media/USB-Drive exfat defalts,uid=1000,gid=1000,dmask=000,fmask=111 0 0
 ```
 
 _Note: Update the line above with your own UUID, mount directory, file system, UID and GID accordingly._
