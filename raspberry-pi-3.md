@@ -342,4 +342,5 @@ You can see the icons available for desktop shortcuts in `/usr/share/pixmaps/`
 - https://www.raspberrypi.org/blog/introducing-pixel/
 - http://alanwsmith.com/rsync-exclude-list-for-mac-osx
 - https://kuttler.eu/en/post/sshfs-transport-endpoint-not-connecte/
+- http://www.omaroid.com/fstab-permission-masks-explained/
 - http://askubuntu.com/questions/429848/dmask-and-fmask-mount-options
