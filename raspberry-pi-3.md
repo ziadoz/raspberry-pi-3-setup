@@ -102,7 +102,7 @@ Type=Application
 Categories=AudioVideo;Video;Player;TV;
 ```
 
-## Install FAT32 and NTFS File System Support
+## Install FAT32, ExFAT and NTFS File System Support
 Install the following packages: 
 ```
 sudo apt-get install exfat-fuse exfat-utils ntfs-3g
