@@ -262,7 +262,7 @@ Thumbs.d
 
 Do a dry run (the `-n` flag) to ensure the correct files are being backed up: 
 ```
-rsync -rthvuc --exclude-from="$HOME/Backups/rsync_excludes.txt" /media/NAS/ /media/USB-Drive/
+rsync -rtvuc --exclude-from="$HOME/Backups/rsync_excludes.txt" /media/NAS/ /media/USB-Drive/
 ```
 
 Once you're happy it works you can add it to your user's crontab: 
@@ -272,7 +272,7 @@ crontab -e
 
 Add the following contents to it to run it every night at 1am: 
 ```
-0 1 * * * rsync -rthvuc --log-file="$HOME/Backups/nas_backups_`date +'%Y-%m-%d'`.txt" --exclude-from="$HOME/Backups/rsync_excludes.txt" /media/NAS/ /media/USB-Drive/
+0 1 * * * rsync -rtvuc --log-file="$HOME/Backups/nas_backups_`date +'%Y-%m-%d'`.txt" --exclude-from="$HOME/Backups/rsync_excludes.txt" /media/NAS/ /media/USB-Drive/
 ```
 
 You can add the `--exclude` option to exclude a specific pattern of files or directories.
@@ -281,6 +281,13 @@ You can see the last backup log by viewing the file contents:
 ```
 cat ~/Logs/nas_backups_YYYY-MM-DD.txt
 ```
+
+To repair an exFAT drive on Windows run the following command:
+```
+chkdsk.exe /F Z:
+```
+
+_Note: Replace Z: with the relevant drive letter._
 
 ## Setup Steam Controller
 The following instructions should allow you to use the Steam Controller wirelessly.
@@ -384,3 +391,4 @@ You can see the icons available for desktop shortcuts in `/usr/share/pixmaps/`
 - http://www.omaroid.com/fstab-permission-masks-explained/
 - http://askubuntu.com/questions/429848/dmask-and-fmask-mount-options
 - http://askubuntu.com/questions/609003/mount-exfat-warning
+- http://blog.marcelotmelo.com/linux/ubuntu/rsync-to-an-exfat-partition/
