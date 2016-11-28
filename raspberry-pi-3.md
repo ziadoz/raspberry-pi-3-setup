@@ -262,7 +262,7 @@ Thumbs.d
 
 Do a dry run (the `-n` flag) to ensure the correct files are being backed up: 
 ```
-rsync -rthvuc --log-file="$HOME/Backups/nas_backups.txt" --exclude-from="$HOME/Backups/rsync_excludes.txt" /media/NAS/ /media/USB-Drive/
+rsync -rthvuc --exclude-from="$HOME/Backups/rsync_excludes.txt" /media/NAS/ /media/USB-Drive/
 ```
 
 Once you're happy it works you can add it to your user's crontab: 
