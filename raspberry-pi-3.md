@@ -269,7 +269,7 @@ Thumbs.d
 
 Do a dry run (the `-n` flag) to ensure the correct files are being backed up: 
 ```
-/usr/bin/rsync -rtvuc --exclude-from="$HOME/Backups/rsync_excludes.txt" /media/NAS/ /media/USB-Drive/
+/usr/bin/rsync -rtvun --exclude-from="$HOME/Backups/rsync_excludes.txt" /media/NAS/ /media/USB-Drive/
 ```
 
 Next, create a script to handle the backups:
