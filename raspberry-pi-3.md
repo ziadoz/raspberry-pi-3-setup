@@ -269,7 +269,7 @@ Thumbs.d
 
 Do a dry run (the `-n` flag) to ensure the correct files are being backed up: 
 ```
-/usr/bin/rsync -rtvun --exclude-from="$HOME/Backups/rsync_excludes.txt" /media/NAS/ /media/USB-Drive/
+rsync -rtvun --exclude-from="$HOME/Backups/rsync_excludes.txt" /media/NAS/ /media/USB-Drive/
 ```
 
 Next, create a script to handle the backups:
@@ -294,7 +294,9 @@ crontab -e
 
 Add the following contents to it to run it every night at 1am: 
 ```
-0 1 * * * /bin/bash $HOME/Backups/backup.sh
+SHELL=/bin/bash
+
+0 1 * * * $HOME/Backups/backup.sh
 ```
 
 You can add the `--exclude` option to exclude a specific pattern of files or directories.
