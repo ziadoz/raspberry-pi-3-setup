@@ -272,6 +272,21 @@ Do a dry run (the `-n` flag) to ensure the correct files are being backed up:
 /usr/bin/rsync -rtvuc --exclude-from="$HOME/Backups/rsync_excludes.txt" /media/NAS/ /media/USB-Drive/
 ```
 
+Next, create a script to handle the backups:
+```
+touch Backups/backup.sh
+```
+
+With the following contents:
+```
+#!/bin/bash
+
+BACKUP_LOG="$HOME/Backups/nas_backups_`date +'%Y-%m-%d'`.txt"
+BACKUP_EXCLUDES="$HOME/Backups/rsync_excludes.txt"
+
+/usr/bin/rsync -rtvu --log-file="$BACKUP_LOG" --exclude-from="$BACKUP_EXCLUDES" /media/NAS/ /media/USB-Drive/
+```
+
 Once you're happy it works you can add it to your user's crontab: 
 ```
 crontab -e
@@ -279,7 +294,7 @@ crontab -e
 
 Add the following contents to it to run it every night at 1am: 
 ```
-0 1 * * * /usr/bin/rsync -rtvuc --log-file="$HOME/Backups/nas_backups_`date +'%Y-%m-%d'`.txt" --exclude-from="$HOME/Backups/rsync_excludes.txt" /media/NAS/ /media/USB-Drive/
+0 1 * * * /bin/bash $HOME/Backups/backup.sh
 ```
 
 You can add the `--exclude` option to exclude a specific pattern of files or directories.
