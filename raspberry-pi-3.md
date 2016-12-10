@@ -299,7 +299,7 @@ SHELL=/bin/bash
 0 1 * * * $HOME/Backups/backup.sh
 ```
 
-You can add the `--exclude` option to exclude a specific pattern of files or directories.
+You can add the `--exclude` option to exclude a specific pattern of files or directories, and the `--delete-after` option to ensure files deleted from the target are also removed from the destination.
 
 You can see the last backup log by viewing the file contents:
 ```
