@@ -284,7 +284,7 @@ With the following contents:
 BACKUP_LOG="$HOME/Backups/nas_backups_`date +'%Y-%m-%d'`.txt"
 BACKUP_EXCLUDES="$HOME/Backups/rsync_excludes.txt"
 
-/usr/bin/rsync -rtvu --log-file="$BACKUP_LOG" --exclude-from="$BACKUP_EXCLUDES" /media/NAS/ /media/USB-Drive/
+/usr/bin/rsync -rtvu --log-file="$BACKUP_LOG" --exclude-from="$BACKUP_EXCLUDES" --delete-after /media/NAS/ /media/USB-Drive/
 ```
 
 Once you're happy it works you can add it to your user's crontab: 
