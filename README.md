@@ -226,10 +226,10 @@ _Note: Replace Z: with the relevant drive letter._
 
 You can format a partition as EXT4:
 ```
-mkfs.ext4 /path/to/mount
+mkfs.ext4 /path/to/mount -L YourLabel
 ```
 
-You can name the drive:
+You can also change the drive label afterwards:
 ```
 e2label /path/to/mount YourLabel
 ```
