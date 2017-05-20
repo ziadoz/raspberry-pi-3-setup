@@ -222,6 +222,23 @@ chkdsk.exe /F Z:
 
 _Note: Replace Z: with the relevant drive letter._
 
+## Create EXT4 Drive
+
+You can format a partition as EXT4:
+```
+mkfs.ext4 /path/to/mount
+```
+
+You can name the drive:
+```
+e2label /path/to/mount YourLabel
+```
+
+And you can easily mount it in the `/etc/fstab` as follows:
+```
+UUID=1234-5678 /media/USB-Drive ext4 defaults,auto 0 0
+```
+
 ## Backup NAS to USB Drive
 First, create a directory to store the backup logs in: 
 ```
