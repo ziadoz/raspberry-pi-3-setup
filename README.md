@@ -437,3 +437,4 @@ You can see the icons available for desktop shortcuts in `/usr/share/pixmaps/`
 - https://kwilson.io/blog/format-a-linux-disk-as-ext4-from-the-command-line/
 - http://anonexp.blogspot.co.uk/2013/04/ext4-mount-options-for-ext4-file-system.html
 - https://unix.stackexchange.com/questions/114485/fdisk-l-shows-ext3-file-system-as-hpfs-ntfs
+- https://gordonlesti.com/mount-ext4-usb-flash-drive-to-raspberry-pi/
