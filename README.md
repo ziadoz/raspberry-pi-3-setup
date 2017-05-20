@@ -403,6 +403,11 @@ Type=Application
 Icon=florence
 ```
 
+## Install Docker
+```
+curl -fsSL https://get.docker.com | sh
+```
+
 ## Install Useful Packages
 ```
 sudo apt-get install tree screen tmux
@@ -438,3 +443,4 @@ You can see the icons available for desktop shortcuts in `/usr/share/pixmaps/`
 - http://anonexp.blogspot.co.uk/2013/04/ext4-mount-options-for-ext4-file-system.html
 - https://unix.stackexchange.com/questions/114485/fdisk-l-shows-ext3-file-system-as-hpfs-ntfs
 - https://gordonlesti.com/mount-ext4-usb-flash-drive-to-raspberry-pi/
+- https://github.com/moby/moby/pull/24815
