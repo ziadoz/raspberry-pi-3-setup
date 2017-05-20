@@ -434,3 +434,4 @@ You can see the icons available for desktop shortcuts in `/usr/share/pixmaps/`
 - http://askubuntu.com/questions/609003/mount-exfat-warning
 - http://blog.marcelotmelo.com/linux/ubuntu/rsync-to-an-exfat-partition/
 - http://stackoverflow.com/questions/2135478/how-to-simulate-the-environment-cron-executes-a-script-with
+- https://kwilson.io/blog/format-a-linux-disk-as-ext4-from-the-command-line/
