@@ -301,9 +301,11 @@ With the following contents:
 BACKUP_DIR="$HOME/Backups"
 BACKUP_LOG="$BACKUP_DIR/nas_backups_`date +'%Y-%m-%d'`.txt"
 BACKUP_EXCLUDES="$BACKUP_DIR/rsync_excludes.txt"
+BACKUP_LOG_DAYS=7
 
-/usr/bin/rsync -rtvu --log-file="$BACKUP_LOG" --exclude-from="$BACKUP_EXCLUDES" --delete-after /media/NAS/ /media/USB-Drive/
-find $BACKUP_DIR/nas_backups_*.txt -mtime +14 -exec rm {} \;
+/usr/bin/rsync -rtvu --log-file="$BACKUP_LOG" --exclude-from="$BACKUP_EXCLUDES" --delete-after /media/Sherlock/ /media/Jamie-2TB/
+find $BACKUP_DIR/nas_backups_*.txt -mtime +$BACKUP_LOG_DAYS -exec rm {} \;
+
 ```
 
 Once you're happy it works you can add it to your user's crontab: 
