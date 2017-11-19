@@ -305,7 +305,6 @@ BACKUP_LOG_DAYS=7
 
 /usr/bin/rsync -rtvu --log-file="$BACKUP_LOG" --exclude-from="$BACKUP_EXCLUDES" --delete-after /media/Sherlock/ /media/Jamie-2TB/
 find $BACKUP_DIR/nas_backups_*.txt -mtime +$BACKUP_LOG_DAYS -exec rm {} \;
-
 ```
 
 Once you're happy it works you can add it to your user's crontab: 
