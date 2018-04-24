@@ -164,7 +164,7 @@ Or for full **read and write** add this to the `/etc/fstab` instead:
 //192.168.0.x/NAS /media/NAS cifs credentials=/home/username/.smbcredentials,_netdev,x-systemd.automount,iocharset=utf8,sec=ntlm,rw 0 0
 ```
 
-_Note: Update the lines above with your own NAS IP address, mount directory, username, UID and GID accordingly. For devices running older versions of Samba you may need to add `vers=1.0` after `ro` or `rw` above._
+_Note: Update the lines above with your own NAS IP address, mount directory, username, UID and GID accordingly. For devices running older versions of Samba you may need to add `,vers=1.0` after `ro` or `rw` above._
 
 Now run this to mount the NAS:
 ```
