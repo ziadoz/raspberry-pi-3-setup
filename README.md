@@ -165,6 +165,7 @@ Or for full **read and write** add this to the `/etc/fstab` instead:
 ```
 
 _Note: Update the lines above with your own NAS IP address, mount directory, username, UID and GID accordingly._
+      _For devices running older versions of Samba you may need to add `vers=1.0` after `ro` or `rw` above._
 
 Now run this to mount the NAS:
 ```
