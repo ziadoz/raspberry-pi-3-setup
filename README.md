@@ -409,6 +409,11 @@ Icon=florence
 curl -fsSL https://get.docker.com | sh
 ```
 
+## Install Pi Hole
+```
+curl -sSL https://install.pi-hole.net | bash
+```
+
 ## Install Useful Packages
 ```
 sudo apt-get install tree screen tmux
