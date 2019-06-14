@@ -331,13 +331,24 @@ You can see what environment variables are available in the cron environment by 
 env >> $HOME/Backups/cron_env.txt
 ```
 
-You can also ensure any macOS hidden "dotfiles" are deleted by adding the following command to the `backups.sh` script:
+You can also ensure any macOS hidden "dotfiles" are deleted by create a `dotfiles.sh` script:
 
+```
+touch dotfiles.sh
+chmod +x dotfiles.sh
+```
+
+And then adding the following contents to it: 
 ```
 find /media/NAS -not -path "*ExcludeDirectory*" -iname ".*" -type f -exec rm -rf {} \;
 ```
 
 _Note: The filesystem must be writeable for this to work._
+
+You can also add this to the crontab:
+```
+0 1 * * * $HOME/Backups/dotfiles.sh
+```
 
 ## Setup Steam Controller
 The following instructions should allow you to use the Steam Controller wirelessly.
