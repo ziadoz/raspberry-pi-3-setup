@@ -334,7 +334,7 @@ env >> $HOME/Backups/cron_env.txt
 You can also ensure any macOS hidden "dotfiles" are deleted by adding the following command to the `backups.sh` script:
 
 ```
-find /media/NAS -not -path "*ExcludeDirectory*" -iname ".*" -type f -exec rm {} \;
+find /media/NAS -not -path "*ExcludeDirectory*" -iname ".*" -type f -exec rm -rf {} \;
 ```
 
 ## Setup Steam Controller
