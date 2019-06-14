@@ -337,6 +337,8 @@ You can also ensure any macOS hidden "dotfiles" are deleted by adding the follow
 find /media/NAS -not -path "*ExcludeDirectory*" -iname ".*" -type f -exec rm -rf {} \;
 ```
 
+_Note: The filesystem must be writeable for this to work._
+
 ## Setup Steam Controller
 The following instructions should allow you to use the Steam Controller wirelessly.
 
