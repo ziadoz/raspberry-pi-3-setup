@@ -303,7 +303,7 @@ BACKUP_LOG="$BACKUP_DIR/nas_backups_`date +'%Y-%m-%d'`.txt"
 BACKUP_EXCLUDES="$BACKUP_DIR/rsync_excludes.txt"
 BACKUP_LOG_DAYS=7
 
-/usr/bin/rsync -rtvu --log-file="$BACKUP_LOG" --exclude-from="$BACKUP_EXCLUDES" --delete-after /media/Sherlock/ /media/Jamie-2TB/
+/usr/bin/rsync -rtvu --log-file="$BACKUP_LOG" --exclude-from="$BACKUP_EXCLUDES" --delete-after /media/NAS/ /media/USB-Drive/
 find $BACKUP_DIR/nas_backups_*.txt -mtime +$BACKUP_LOG_DAYS -exec rm {} \;
 ```
 
@@ -329,6 +329,12 @@ cat ~/Logs/nas_backups_YYYY-MM-DD.txt
 You can see what environment variables are available in the cron environment by adding the following to your crontab (you'll need to add whatver `* * * * *` you want):
 ```
 env >> $HOME/Backups/cron_env.txt
+```
+
+You can also ensure any macOS hidden "dotfiles" are deleted by adding the following command to the `backups.sh` script:
+
+```
+find /media/NAS -not -path "*ExcludeDirectory*" -iname ".*" -type f -exec rm {} \;
 ```
 
 ## Setup Steam Controller
