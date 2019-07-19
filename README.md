@@ -338,7 +338,7 @@ touch dotfiles.sh
 chmod +x dotfiles.sh
 ```
 
-And then adding the following contents to it: 
+And then adding the following contents to it:
 ```
 find /media/NAS -not -path "*ExcludeDirectory*" -iname ".*" -type f -exec rm -rf {} \;
 ```
@@ -432,6 +432,10 @@ curl -fsSL https://get.docker.com | sh
 ```
 curl -sSL https://install.pi-hole.net | bash
 ```
+
+### Install DNS over HTTPS
+
+Follow Pi Hole's official instructions: [https://docs.pi-hole.net/guides/dns-over-https/](https://docs.pi-hole.net/guides/dns-over-https/)
 
 ## Install Useful Packages
 ```
