@@ -423,6 +423,12 @@ Type=Application
 Icon=florence
 ```
 
+## Install Steam Link
+```
+sudo apt update
+sudo apt install steamlink
+```
+
 ## Install Docker
 ```
 curl -fsSL https://get.docker.com | sh
