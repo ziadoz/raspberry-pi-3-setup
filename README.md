@@ -47,7 +47,7 @@ Go to `3 Boot Options` then `B3 Desktop` and choose `<Ok>`.
 
 ## Setup Display
 Ensure the display works nicely over HDMI:
-````
+```
 sudo nano /etc/boot.txt
 ```
 
@@ -138,7 +138,7 @@ sudo mkdir /media/NAS
 
 Test you can mount the NAS manually:
 ```
-sudo mount -t cifs //192.168.0.x/NAS /media/NAS -o user=username
+sudo mount -t cifs //192.168.0.x/NAS /media/NAS -o credentials=~/.smbcredentials,vers=1.0
 ```
 
 Any mounting problems can be found by checking the logs:
