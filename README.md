@@ -473,3 +473,7 @@ You can see the icons available for desktop shortcuts in `/usr/share/pixmaps/`
 - https://unix.stackexchange.com/questions/114485/fdisk-l-shows-ext3-file-system-as-hpfs-ntfs
 - https://gordonlesti.com/mount-ext4-usb-flash-drive-to-raspberry-pi/
 - https://github.com/moby/moby/pull/24815
+- https://www.jaredwolff.com/raspberry-pi-setting-your-locale/
+- https://help.ubuntu.com/community/MountWindowsSharesPermanently
+- https://serverfault.com/questions/367934/how-do-i-pass-credential-file-to-mount-cifs
+- https://www.jeffgeerling.com/blog/2017/mount-raspberry-pi-sd-card-on-mac-read-only-osxfuse-and-ext4fuse
